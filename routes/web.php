@@ -12,5 +12,8 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('front.index');
+});
+Route::prefix('admins')->group(function (){
+    Route::get('/','admin\HomeController@index');
 });
