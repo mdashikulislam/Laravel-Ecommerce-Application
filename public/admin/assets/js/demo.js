@@ -15,19 +15,7 @@ Circles.create({
 	styleText:    true
 })
 
-//Notify
-$.notify({
-	icon: 'flaticon-alarm-1',
-	title: 'Atlantis Lite',
-	message: 'Free Bootstrap 4 Admin Dashboard',
-},{
-	type: 'info',
-	placement: {
-		from: "bottom",
-		align: "right"
-	},
-	time: 1000,
-});
+
 
 // JQVmap
 $('#map-example').vectorMap(
@@ -53,7 +41,7 @@ $('#map-example').vectorMap(
 
 //Chart
 
-var ctx = document.getElementById('statisticsChart').getContext('2d');
+// var ctx = document.getElementById('statisticsChart').getContext('2d');
 
 var statisticsChart = new Chart(ctx, {
 	type: 'line',

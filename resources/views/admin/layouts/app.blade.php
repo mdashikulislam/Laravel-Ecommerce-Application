@@ -396,6 +396,10 @@
         <div class="content">
             <div class="page-inner">
                 @yield('breadcum')
+                <div class="row">
+                    @section('maincontent')
+                    @show
+                </div>
             </div>
         </div>
         <footer class="footer">
@@ -469,6 +473,6 @@
 <!-- Atlantis DEMO methods, don't include it in your project! -->
 <script src="{{asset('admin/assets/js/setting-demo.js')}}"></script>
 <script src="{{asset('admin/assets/js/demo.js')}}"></script>
-
+@yield('js')
 </body>
 </html>

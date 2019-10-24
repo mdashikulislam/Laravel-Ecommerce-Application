@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateSettingsTable extends Migration
+class CreateHeaderTopsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,11 @@ class CreateSettingsTable extends Migration
      */
     public function up()
     {
-        Schema::create('settings', function (Blueprint $table) {
+        Schema::create('header_tops', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->boolean('header_top')->default(0);
-            $table->boolean('header')->default(0);
-            $table->boolean('slider')->default(0);
+            $table->string('phone',20);
+            $table->string('email');
+            $table->string('text');
             $table->timestamps();
         });
     }
@@ -29,6 +29,6 @@ class CreateSettingsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('settings');
+        Schema::dropIfExists('header_tops');
     }
 }
